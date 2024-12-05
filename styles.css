@@ -1,0 +1,172 @@
+/* 基礎樣式 */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #333;
+    background-color: #f3f4f6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 表單樣式 */
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234F46E5'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7em top 50%;
+    background-size: 1.2em auto;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+}
+
+/* 自定義範圍輸入樣式 */
+.custom-range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #e5e7eb;
+    outline: none;
+}
+
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #4F46E5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-range::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #4F46E5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* 按鈕動畫 */
+.btn-animate {
+    transition: all 0.3s ease;
+}
+
+.btn-animate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* 卡片樣式 */
+.channel-card {
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.channel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.channel-details-btn {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* 模態框動畫 */
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-animate {
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+/* 響應式設計 */
+@media (max-width: 640px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* 加載動畫 */
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #4F46E5;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 自定義滾動條 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* 關閉按鈕樣式 */
+.close-icon {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 複選框樣式 */
+.form-checkbox {
+    appearance: none;
+    padding: 0;
+    color-adjust: exact;
+    display: inline-block;
+    vertical-align: middle;
+    background-origin: border-box;
+    user-select: none;
+    flex-shrink: 0;
+    height: 1rem;
+    width: 1rem;
+    color: #4F46E5;
+    background-color: #fff;
+    border-color: #d1d5db;
+    border-width: 1px;
+    border-radius: 0.25rem;
+}
+
+.form-checkbox:checked {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    border-color: transparent;
+    background-color: currentColor;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
